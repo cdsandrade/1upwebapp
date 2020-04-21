@@ -1,0 +1,18 @@
+version: "3"
+services:
+  1upwebapp:
+    #image: "1upwebapp:dev"
+    #image: "${AWS_ACCOUNT}.dkr.ecr.us-east-1.amazonaws.com/1uphealth:dev"
+    image: "${ACR_NAME}.azurecr.io/1upwebapp:build-${BUILD_NUMBER}"
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      - "ONEUP_DEMOWEBAPPLOCAL_CLIENTID=${ONEUP_DEMOWEBAPPLOCAL_CLIENTID}"
+      - "ONEUP_DEMOWEBAPPLOCAL_CLIENTSECRET=${ONEUP_DEMOWEBAPPLOCAL_CLIENTSECRET}"
+#  smtp:
+#    image: python:2-alpine
+#    command: ["python", "-m smtpd", "-n", "-c DebuggingServer", "localhost:25"]
+#    ports:
+#      - "25:25"
+#    entrypoint: ["python", "-m smtpd", "-n", "-c DebuggingServer", "localhost:25"]

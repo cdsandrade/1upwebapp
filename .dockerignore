@@ -1,0 +1,30 @@
+# Git
+.git
+.gitattributes
+.gitignore
+
+# IDE
+.vscode
+
+# Deployment
+.circleci/
+azure-pipeline.yml
+
+# Node/NPM
+node_modules/
+npm-debug.log*
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+docker-build.sh
+docker-run.sh
+  
+# Logs
+logs
+*.log
+
+# Other
+**/*.bak
+**/*.example

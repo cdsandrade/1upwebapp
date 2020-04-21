@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Increment local demo build counter
 export BUILD_NUMBER=$((BUILD_NUMBER+1))
 
 sed -e "s/insert_client_id/$ONEUP_DEMOWEBAPPLOCAL_CLIENTID/" config.json.example > config.json

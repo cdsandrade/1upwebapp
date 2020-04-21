@@ -4,9 +4,9 @@
   "description": "1upHealth Web App",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon server.js",
+    "dev": "pm2-runtime start pm2.config.js",
     "build": "next build",
-    "start": "cross-env NODE_ENV=production node server.js",
+    "start": "pm2-runtime start pm2.config.js --env production",
     "test": "jest",
     "lint": "eslint .",
     "lint:fix": "eslint --fix ."
@@ -59,6 +59,7 @@
     "passwordless": "1.1.2",
     "passwordless-memorystore": "0.0.1",
     "path-match": "^1.2.4",
+    "pm2": "^4.3.1",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-syntax-highlighter": "^10.3.0",
